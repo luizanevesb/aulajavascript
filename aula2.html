@@ -38,7 +38,7 @@
         <hr>
         <h1>Calculadora</h1>
         <div id="display">
-            090909
+            0
         </div>
         Val 1 <input type="number" id="val1">
         <br><br>
@@ -53,17 +53,21 @@
 
 
         <script>
+
+            //função que altera cor do título
             function cor() {
                 var elemento = document.getElementById("titulo");
                 console.log(elemento);
                 elemento.style.color = "blue";
             }
 
+            //função que altera cor do subtítulo
             function alteraCor() {
                 var texto = document.getElementById("cor").value;
                 document.getElementById("sub").style.color = texto;
             }
 
+            //primeira calculadora
             function soma() {
                 var val1 = document.getElementById("val1");
                 var val2 = document.getElementById("val2");
