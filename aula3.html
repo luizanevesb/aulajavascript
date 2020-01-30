@@ -4,76 +4,23 @@
     <title>Aula JS</title>
     <meta charset="utf-8" />
 
-    <style>
-        #titulo {
-            color: red;
-        }
-
-        #display {
-            border: 1px dotted;
-            width: 200px;
-            padding: 8px;
-            background-color: deeppink;
-            margin-bottom: 20px;
-            text-align: right;
-            font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-        }
-    </style>
-
 </head>
 
 <body>
-    <div>
-        <h1 id="titulo">Aula 2</h1>
-        <h1 id="sub">Subtítulo</h1>
+    <h1>Aula 3</h1>
 
-        <button onClick="cor()">Clique aqui</button>
+    <fieldset>
+        <input type="text" id="novacidade"/>
+        <button onClick="adicionaCidade()">Adicionar</button>
+    </fieldset>
 
-        <br>
-        <br>
+    <h2>Cidades</h2>
+    <ul id="lista">
+        <li>Curitiba</li>
+    </ul>
 
-        <input type="text" id="cor">
-        <button onClick="alteraCor()">Altera</button>
+    <script src="aula3.js"></script>
 
-        <hr>
-        <h1>Calculadora</h1>
-        <div id="display">
-            090909
-        </div>
-        Val 1 <input type="number" id="val1">
-        <br><br>
-        Val 2 <input type="number" id="val2">
-
-        <br><br>
-        <button onClick="soma()">Calcular</button>
-
-
-        <script>
-            function cor() {
-                var elemento = document.getElementById("titulo");
-                console.log(elemento);
-                elemento.style.color = "blue";
-            }
-
-            function alteraCor() {
-                var texto = document.getElementById("cor").value;
-                document.getElementById("sub").style.color = texto;
-            }
-
-            function soma() {
-                var val1 = document.getElementById("val1");
-                var val2 = document.getElementById("val2");
-
-                resultado = parseInt(val1.value) + parseInt(val2.value);
-                console.log(resultado);
-
-                document.getElementById("display").innerHTML = resultado;
-
-            }
-
-        </script>
-
-    </div>
 </body>
 
 </html>
