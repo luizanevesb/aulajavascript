@@ -26,3 +26,24 @@ function nome()
     box.innerHTML = nome.value.toUpperCase();
 
 }
+
+function letra() 
+{
+    var nome = document.getElementById("nome");
+    
+    var box = document.getElementById("box");
+
+    primeiraLetra = nome.value.slice(0,1);
+    primeiraLetra = primeiraLetra.toUpperCase();
+
+    //tamanho = nome.value.length;
+
+    resto = nome.value.slice(1).toLowerCase();
+
+    texto = primeiraLetra + resto
+
+    console.log(texto);
+
+    box.innerHTML = texto;
+
+}
