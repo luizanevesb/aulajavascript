@@ -1,9 +1,28 @@
 function adicionaCidade() 
 {
-    var novacidade = document.getElementById("novacidade").value;
+    var texto = document.getElementById("novacidade");
+    var cidade = texto.value;
     
-    document.getElementById("lista").innerHTML += "<li>"+ novacidade+"</li>";
+    var lista = document.getElementById("lista");
 
-    document.getElementById("novacidade").value = null;
+    var existe = lista.innerHTML.search(cidade);
+
+    if (existe == -1) {
+        lista.innerHTML += "<li>"+ cidade +"</li>";
+    } else {
+        window.alert("Cidade já cadastrada");
+    }
+
+    novacidade.value = "";
+
+}
+
+function nome() 
+{
+    var nome = document.getElementById("nome");
+    
+    var box = document.getElementById("box");
+
+    box.innerHTML = nome.value.toUpperCase();
 
 }
