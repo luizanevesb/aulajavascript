@@ -57,19 +57,16 @@ function adicionaCidade()
 
 function imprimeCidades()
 {
-    var cidades = ["Curitiba", "Pinhais", "Campo Largo"];
-    console.log(cidades);
-
     var lista = document.getElementById("lista");
 
     lista.innerHTML = ""
 
-    var ult = cidades.length-1
+    var ult = listaCidades.length-1
 
     for (var i = 0; i <= ult; i += 1)
     {
         //console.log(cidades[i]);
-        lista.innerHTML += "<li>"+ cidades[i] +"</li>";
+        lista.innerHTML += "<li>"+ listaCidades[i] +"</li>";
     }
 
     /*
