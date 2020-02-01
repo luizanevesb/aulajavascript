@@ -23,9 +23,22 @@
 
         <h2>Letreiro</h2>
 
-        <div id="letreiro">Próxima parada: Estação UTPR </div>
+        <div id="letreiro">Próxima parada: Estação UTPR; </div>
 
         <button onclick="ligarAutomatico()">Ligar</button>
+        <button onclick="desligar()">Desligar</button>
+
+        <h2>Cidades</h2>
+
+        <fieldset>
+            <input type="text" id="novacidade"/>
+            <button onClick="adicionaCidade()">Adicionar</button>
+            <button onClick="imprimeCidades()">Imprime</button>
+        </fieldset>
+
+        <ul id="lista">
+            
+        </ul>
 
         <script src="aula4.js"></script>
     </body>

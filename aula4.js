@@ -1,12 +1,5 @@
 //funções
 
-var nome = "Luiza";
-
-function imprime() 
-{
-    console.log(nome);
-}
-
 function soma(n1,n2)
 {
     var resultado = n1 + n2;
@@ -25,8 +18,6 @@ function ligar()
     var letreiro = document.getElementById("letreiro");
     var texto = letreiro.innerHTML;
 
-    console.log(texto);
-
     primeiraletra = texto.slice(0,1);
 
     frase = texto.slice(1) + primeiraletra;
@@ -35,18 +26,57 @@ function ligar()
 
 }
 
+var id;
+
 //ligar o painel
 function ligarAutomatico() 
 {
-    var letreiro = document.getElementById("letreiro");
-    var texto = letreiro.innerHTML;
+    id = window.setInterval(ligar,200);
+}
 
-    console.log(texto);
+function desligar() 
+{
+    window.clearInterval(id);
+}
 
-    primeiraletra = texto.slice(0,1);
+var listaCidades = []
 
-    frase = texto.slice(1) + primeiraletra;
+function adicionaCidade() 
+{
+    var texto = document.getElementById("novacidade");
+    var cidade = texto.value;
+    
+    var lista = document.getElementById("lista");
 
-    letreiro.innerHTML = frase;
+    listaCidades.push(cidade);
+   
+    novacidade.value = ""
+    imprimeCidades();
 
+}
+
+function imprimeCidades()
+{
+    var cidades = ["Curitiba", "Pinhais", "Campo Largo"];
+    console.log(cidades);
+
+    var lista = document.getElementById("lista");
+
+    lista.innerHTML = ""
+
+    var ult = cidades.length-1
+
+    for (var i = 0; i <= ult; i += 1)
+    {
+        //console.log(cidades[i]);
+        lista.innerHTML += "<li>"+ cidades[i] +"</li>";
+    }
+
+    /*
+    for (var i = cidades.length-1; i <= ult; i -= 1)
+    {
+        //console.log(cidades[i]);
+        lista.innerHTML += "<li>"+ cidades[i] +"</li>";
+    }
+    */
 }
