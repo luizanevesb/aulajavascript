@@ -69,11 +69,11 @@ function imprimeCidades()
         lista.innerHTML += "<li>"+ listaCidades[i] +"</li>";
     }
 
-    /*
+    
     for (var i = cidades.length-1; i <= ult; i -= 1)
     {
         //console.log(cidades[i]);
         lista.innerHTML += "<li>"+ cidades[i] +"</li>";
     }
-    */
+    
 }
