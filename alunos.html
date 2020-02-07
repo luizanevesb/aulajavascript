@@ -1,62 +1,62 @@
 <html>
     <head>
         <title>Aula JS</title>
-        <meta charset="utf-8" />
+        <meta charset="utf-8" />   
 
         <style>
-            label {
+            label{ 
                 width: 100px;
-                display: inline-table;
+                display: inline-block;
                 text-align: right;
-            }
 
+            }
             table {
                 margin-top: 40px;
                 border: 1px solid;
                 border-collapse: collapse;
             }
-
             th, td {
                 border: 1px solid;
                 padding: 6px;
             }
-
             thead {
-                background-color:deeppink;
+                background-color:darkturquoise;
             }
         </style>
 
         <script src="jquery-3.4.1.js"></script>
-        <script src="alunos.js"></script>
+
     </head>
 
     <body>
         <h1>Cadastro de Alunos</h1>
+
         <fieldset>
+            <label>Nome:</label>
+            <input type="text" id="nome" />
+            <br>
 
+            <label>Email:</label>
+            <input type="text" id="email"/>
+            <br>
 
-                    <label>Nome: </label>
-                    <input type="text" id="nome"/> <br>
+            <label>Telefone:</label>
+            <input type="text" id="telefone"/>
+            <br>
 
-                    <label>Email: </label>
-                    <input type="text" id="email"/> <br>
+            <label>Sexo:</label>
+            <input type="radio" name="sexo" value="M" />Masculino
+            <input type="radio" name="sexo" value="F" />Feminino
+            <br>
 
-                    <label>Telefone: </label>
-                    <input type="text" id="telefone"/> <br>
-
-                    <label>Sexo: </label>
-                    <input type="radio" name="sexo" value="M"/>Masculino
-                    <input type="radio" name="sexo" value="F"/>Feminino <br>
-
-                    <label>Período: </label>
-                    <select id="periodo">
-                        <option value="0">--Selecione--</option>
-                        <option value="1">Manhã</option>
-                        <option value="2">Tarde</option>
-                        <option value="3">Noite</option>
-                    </select><br>
-
-                
+            <label>Período:</label>
+            <select id="periodo">
+                <option value="0">-- Selecione --</option>
+                <option value="1">Manhã</option>
+                <option value="2">Tarde</option>
+                <option value="3">Noite</option>
+            </select>
+            <br>
 
             <button id="btn-cadastrar">Cadastrar</button>
         </fieldset>
@@ -68,20 +68,21 @@
                     <th>Email</th>
                     <th>Telefone</th>
                     <th>Sexo</th>
-                    <th>Período</th>
-
+                    <th>Periodo</th>
                 </tr>
             </thead>
             <tbody id="alunos">
                 <tr>
-                    <td>Luiza</td >
-                    <td>luiza.nbs@gmail.com</td>
-                    <td>985044090</td>
-                    <td>F</td>
+                    <td>Pedro Paulo</td>
+                    <td>pedro@paulo.com</td>
+                    <td>11-1234-1234</td>
+                    <td>Masculino</td>
                     <td>Noturno</td>
                 </tr>
             </tbody>
         </table>
-        
+
+        <script src="alunos.js"></script>
     </body>
+
 </html>
