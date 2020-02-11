@@ -13,6 +13,7 @@ $(document).ready(function(){
         var errado = false;
 
         $("#msgalert").hide();
+        $("#msgalert").html("");
         $("input, select").removeClass("erro");
         
 
@@ -104,14 +105,29 @@ $(document).ready(function(){
             +"<td>"+ telefone +"</td>"
             +"<td>"+ sexo_rotulo +"</td>"
             +"<td>"+ vetor_periodos[periodo] + "</td>"
+            +"<td><span class='btn-del'>[X]</span></td>"
             +"</tr>";
 
         $("#alunos").append(linha);
 
+        $("input[type=text]").val("");
+        $("select").val("0");
+        $("input[type=radio]").prop("checked",false);
+
     }); //fim do click
 
     $("#telefone").mask("(00)90000-0000")
+/*
+    $(".btn-del").click(function(){
+        $(this).parent().parent().remove();
+    }); //fim do click
+*/
+    $("#alunos").on("click",".btn-del",function(){
+        $(this).parent().parent().remove();
+    });
 
 }); // fim ready
+
+
 
 

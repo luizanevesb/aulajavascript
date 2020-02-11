@@ -29,8 +29,15 @@
                 margin: 6px 0;
                 display: none;
             }
-            .erro{
+            .erro {
                 outline:red 2px solid;
+            }
+            .btn-del {
+                color:darkviolet;
+                cursor: pointer;
+            }
+            .btn-del:hover {
+                border: 1px solid;
             }
         </style>
 
@@ -82,6 +89,7 @@
                     <th>Telefone</th>
                     <th>Sexo</th>
                     <th>Periodo</th>
+                    <th>Ação</th>
                 </tr>
             </thead>
             <tbody id="alunos">
@@ -91,11 +99,11 @@
                     <td>11-1234-1234</td>
                     <td>Masculino</td>
                     <td>Noturno</td>
+                    <td><span class="btn-del">[X]</span></td>
                 </tr>
             </tbody>
         </table>
 
-        <script src="alunos.js"></script>
     </body>
 
 </html>
