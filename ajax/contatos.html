@@ -1,0 +1,78 @@
+<html>
+    <head>
+        <title>Aula JS</title>
+        <meta charset="utf-8" />   
+
+        <link href="css/bootstrap.css" rel="stylesheet" />
+        <script src="js/jquery-3.4.1.js"></script>
+        <script src="js/bootstrap.bundle.js"></script>
+
+        <script src="listagem.js"></script>
+
+        <style>
+            h1 {
+                display: inline-block;
+            }
+            table {
+                margin-top: 40px;
+                border: 1px solid;
+                border-collapse: collapse;
+            }
+            th, td {
+                border: 1px solid;
+                padding: 6px;
+            }
+        </style>
+    </head>
+
+    <body>
+
+        <div class="container">
+
+        <h1>Agenda de Contatos</h1>
+
+        <button class="btn btn-success" id="carregar">Carregar</button>
+
+        <fieldset>
+          
+            <label>Nome:</label>
+            <input type="text" id="nome" />
+            <br>
+
+            <label>Email:</label>
+            <input type="text" id="email"/>
+            <br>
+
+            <label>Telefone:</label>
+            <input type="text" id="telefone"/>
+            <br>
+
+            <label>Cidade:</label>
+            <input type="text" id="cidade"/>
+            <br>
+
+            <button id="enviar">Enviar</button>
+
+        </fieldset>
+
+        <table class="table">
+            <thead class="thead-dark">
+                <tr>
+                    <th>Nome</th>
+                    <th>Email</th>
+                    <th>Telefone</th>
+                    <th>Cidade</th>
+                </tr>
+            </thead>
+            <tbody id="conteudo">
+                <tr>
+                    <td>Luiza</td>
+                    <td>luiza@gmail.com</td>
+                    <td>(41)98504-4090</td>
+                    <td>Curitiba</td>
+                </tr>
+            </tbody>
+        </table>
+        </div>
+    </body>
+</html>
