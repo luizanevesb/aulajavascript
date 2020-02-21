@@ -45,6 +45,10 @@ export default {
         }     
     },
     methods: {
+        agendamentos: [
+            {"datahora":"10-10-2020 10:10", "pet":"Amy", "servico":"banho"},
+            {"datahora":"10-10-2020 10:30", "pet":"Rex", "servico":"tosa"}
+        ],
         cadastro: function() {
             var item = {
                 "pet": this.pet, "dono": this.dono

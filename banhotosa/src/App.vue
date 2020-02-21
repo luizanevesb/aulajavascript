@@ -40,17 +40,9 @@ export default {
     return{
       exibeListagem: true,
       colunas: [
-        {
-          key:"datahora", label:"Data/Hora", sortable: true
-        },
-        {
-          key:"pet", label:"Nome do Pet", sortable: true
-        },
-        {
-          key:"servico",
-          label:"Serviço"
-        }
-        
+        {key:"datahora", label:"Data/Hora", sortable: true},
+        {key:"pet", label:"Nome do Pet", sortable: true},
+        {key:"servico", label:"Serviço"}
       ],
       agendamentos: [
         {"datahora":"10-10-2020 10:10", "pet":"Amy", "servico":"banho"},
