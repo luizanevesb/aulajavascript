@@ -14,7 +14,9 @@
         <div v-if="exibeListagem">
         <b-card title="Agendamentos" class="col-md-12">
             <b-table striped hover :items="agendamentos" :fields="colunas">
-
+              <template v-slot:cell(datahora)="valor">
+                {{ formataData(valor.item.datahora) }}
+              </template>
             </b-table>
         </b-card>
         </div>
@@ -29,6 +31,8 @@
 <script>
 
 import Agendamento from "./components/Agendamento"
+import axios from "axios";
+import moment from "moment";
 
 export default {
   name: 'App',
@@ -41,18 +45,30 @@ export default {
       exibeListagem: true,
       colunas: [
         {key:"datahora", label:"Data/Hora", sortable: true},
-        {key:"pet", label:"Nome do Pet", sortable: true},
+        {key:"nome_pet", label:"Nome do Pet", sortable: true},
         {key:"servico", label:"Serviço"}
       ],
-      agendamentos: [
-        {"datahora":"10-10-2020 10:10", "pet":"Amy", "servico":"banho"},
-        {"datahora":"10-10-2020 10:30", "pet":"Rex", "servico":"tosa"}
-      ]
+      agendamentos: []
       
-
     }
    
-  }
+  },
+  methods:
+  {
+    formataData(valor){
+      return moment(valor).format('DD/MM/YYYY HH:mm');
+    }
+  },
+  mounted()
+    {
+      let classe = this;
+
+      axios.get("http://localhost:3000/agendamentos")
+        .then(function(retorno){
+            classe.agendamentos = retorno.data;
+        });
+    }
+
 
 }
 </script>
